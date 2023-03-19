@@ -1,8 +1,7 @@
-import { button } from './utils'
-import { cookieMessage } from './utils'
+import { button } from './globalVariables'
+import { cookieMessage } from './globalVariables'
 export default function initApp() {
 	button.addEventListener('click', event => {
-		event.preventDefault()
 		localStorage.setItem('cookie', 'true')
 		cookieMessage.style.display = 'none'
 	})
@@ -11,5 +10,3 @@ export default function initApp() {
 		cookieMessage.style.display = 'none'
 	}
 }
-
-//localStorage.clear()
