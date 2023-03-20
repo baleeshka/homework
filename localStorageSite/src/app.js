@@ -3,10 +3,10 @@ import { cookieMessage } from './globalVariables'
 export default function initApp() {
 	button.addEventListener('click', event => {
 		localStorage.setItem('cookie', 'true')
-		cookieMessage.style.display = 'none'
+		cookieMessage.classList.add('hide')
 	})
 
 	if (localStorage.getItem('cookie') === 'true') {
-		cookieMessage.style.display = 'none'
+		cookieMessage.classList.add('hide')
 	}
 }
